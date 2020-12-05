@@ -9,7 +9,7 @@
                     <div class="col-md-6">
                         <div class="card">
                             <h2 class="card-header lightcoral">
-                                <a class="text-white" href="">{{ animal.id_animal }}</a>
+                                <a class="text-white" href="{% url 'animal_detail' id_animal=animal.id_animal %}">{{ animal.id_animal }}</a>
                             </h2>
                             <div class="card-body">
                                 <img src="{{ animal.photo }}" alt="" width="100%"/>
