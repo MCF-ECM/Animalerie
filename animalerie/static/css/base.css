@@ -1,0 +1,63 @@
+body {
+    background-color: #DEDFDF;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.header, .footer {
+    padding: 20px;
+}
+
+.darkgrey {
+    background-color: darkgrey;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.lightcoral {
+    background-color: lightcoral;
+}
+
+.text-lightcoral {
+    color: lightcoral;
+}
+
+.cadetblue {
+    background-color: cadetblue;
+}
+
+.text-cadetblue {
+    color: cadetblue;
+}
+
+.darkseagreen {
+    background-color: darkseagreen;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.card-header {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.center {
+    text-align: center;
+}

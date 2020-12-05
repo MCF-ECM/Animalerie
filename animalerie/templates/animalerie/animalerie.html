@@ -1,0 +1,43 @@
+{% extends 'animalerie/base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="text-lightcoral">Animaux</h1>
+            <div class="row">
+                {% for animal in animaux %}
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h2 class="card-header lightcoral">
+                                <a class="text-white" href="">{{ animal.id_animal }}</a>
+                            </h2>
+                            <div class="card-body">
+                                <img src="{{ animal.photo }}" alt="" width="100%"/>
+                                <p class="card-text center">Etat : {{ animal.etat }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h1 class="text-cadetblue">Equipement</h1>
+            <div class="row">
+                {% for equipement in equipements %}
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h2 class="card-header cadetblue">
+                                <a class="text-white" href="">{{ equipement.id_equip | capfirst }}</a>
+                            </h2>
+                            <div class="card-body">
+                                <img src="{{ equipement.photo }}" alt="" width="100%"/>
+                                <p class="card-text center">Disponibilité : {{ equipement.disponibilite }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
