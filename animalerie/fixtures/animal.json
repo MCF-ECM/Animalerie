@@ -1,0 +1,57 @@
+[
+  {
+    "model": "animalerie.animal",
+    "pk": "Tic",
+    "fields": {
+      "race": "tamia",
+      "type": "rongeur",
+      "etat": "affamé",
+      "lieu": "litière",
+      "photo": "https://cdn.pixabay.com/photo/2019/01/27/22/33/chipmunk-3959206_960_720.jpg"
+    }
+  },
+  {
+    "model": "animalerie.animal",
+    "pk": "Tac",
+    "fields": {
+      "race": "tamia",
+      "type": "rongeur",
+      "etat": "affamé",
+      "lieu": "litière",
+      "photo": "https://cdn.pixabay.com/photo/2017/05/16/17/21/chipmunk-2318395_960_720.jpg"
+    }
+  },
+  {
+    "model": "animalerie.animal",
+    "pk": "Patrick",
+    "fields": {
+      "race": "hamster",
+      "type": "rongeur",
+      "etat": "affamé",
+      "lieu": "litière",
+      "photo": "https://cdn.pixabay.com/photo/2018/12/16/16/48/hamster-3878853_960_720.jpg"
+    }
+  },
+  {
+    "model": "animalerie.animal",
+    "pk": "Totoro",
+    "fields": {
+      "race": "ili pika",
+      "type": "rongeur",
+      "etat": "repus",
+      "lieu": "mangeoire",
+      "photo": "https://thumbs.dreamstime.com/b/am%C3%A9ricain-pika-34251585.jpg"
+    }
+  },
+  {
+    "model": "animalerie.animal",
+    "pk": "Pocahontas",
+    "fields": {
+      "race": "opossum",
+      "type": "marsupial",
+      "etat": "endormi",
+      "lieu": "nid",
+      "photo": "https://cdn.pixabay.com/photo/2014/10/07/18/36/possum-478162_960_720.jpg"
+    }
+  }
+]

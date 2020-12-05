@@ -81,6 +81,9 @@ DATABASES = {
     }
 }
 
+FIXTURE_DIRS = (
+   '/path/to/animalerie/fixtures/',
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

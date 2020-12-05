@@ -1,0 +1,34 @@
+[
+  {
+    "model": "animalerie.equipement",
+    "pk": "litière",
+    "fields": {
+      "disponibilite": "libre",
+      "photo": "https://cdn.pixabay.com/photo/2015/01/26/16/56/straw-612861_960_720.jpg"
+    }
+  },
+  {
+    "model": "animalerie.equipement",
+    "pk": "mangeoire",
+    "fields": {
+      "disponibilite":"occupé",
+      "photo": "https://cdn.pixabay.com/photo/2010/12/10/08/sunflower-seeds-1139_960_720.jpg"
+    }
+  },
+  {
+    "model": "animalerie.equipement",
+    "pk": "roue",
+    "fields" :{
+      "disponibilite":"libre",
+      "photo": "https://thumbs.dreamstime.com/b/roue-de-hamster-vide-74339540.jpg"
+    }
+  },
+  {
+    "model": "animalerie.equipement",
+    "pk": "nid",
+    "fields": {
+      "disponibilite":"occupé",
+      "photo": "https://cdn.pixabay.com/photo/2015/09/02/13/08/nest-918898_960_720.jpg"
+    }
+  }
+]
