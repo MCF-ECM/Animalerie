@@ -15,3 +15,8 @@ def animalerie(request):
 def animal_detail(request, id_animal):
     animal = get_object_or_404(Animal, id_animal=id_animal)
     return render(request, 'animalerie/animal_detail.html', {'animal': animal})
+
+def equipement_detail(request, id_equip):
+    equipement = get_object_or_404(Equipement, id_equip=id_equip)
+    return render(request, 'animalerie/equipement_detail.html', {'equipement': equipement})
+

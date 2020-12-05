@@ -18,7 +18,7 @@
                             <p class="card-text">Race : {{ animal.race | capfirst }}</p>
                             <p class="card-text">Etat : {{ animal.etat | capfirst }}</p>
                             <p class="card-text">
-                                Lieu : {{ animal.lieu | capfirst }}
+                                Lieu : <a class="text-black" href="{% url 'equipement_detail' id_equip=animal.lieu.id_equip %}" >{{ animal.lieu | capfirst }}</a>
                             </p>
                         </div>
                     </div>

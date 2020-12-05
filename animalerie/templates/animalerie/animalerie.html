@@ -28,7 +28,7 @@
                     <div class="col-md-6">
                         <div class="card">
                             <h2 class="card-header cadetblue">
-                                <a class="text-white" href="">{{ equipement.id_equip | capfirst }}</a>
+                                <a class="text-white" href="{% url 'equipement_detail' id_equip=equipement.id_equip %}">{{ equipement.id_equip | capfirst }}</a>
                             </h2>
                             <div class="card-body">
                                 <img src="{{ equipement.photo }}" alt="" width="100%"/>

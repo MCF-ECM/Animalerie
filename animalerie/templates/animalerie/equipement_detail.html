@@ -1,0 +1,33 @@
+{% extends 'animalerie/base.html' %}
+
+{% block title %}{{ equipement.id_equip }}{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <h2 class="card-header cadetblue text-white">{{ equipement.id_equip | capfirst }}</h2>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6"><img src="{{ equipement.photo }}" alt="" width="100%"/></div>
+                        <div class="col-md-6">
+                            <p class="card-text">Disponibilité : {{ equipement.disponibilite }}</p>
+                            <p class="card-text">
+                                Occupent(s) :
+                                <ul>
+                                    {% for animal in equipement.occupants %}
+                                        <li><a class="text-black" href="{% url 'animal_detail' id_animal=animal.id_animal %}" >{{ animal }}</a></li>
+                                    {% empty %}
+                                        Aucun animal n'est présent
+                                    {% endfor %}
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

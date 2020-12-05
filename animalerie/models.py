@@ -9,6 +9,13 @@ class Equipement(models.Model):
     def __str__(self):
         return self.id_equip
 
+    def occupants(self):
+        occupants = []
+        for animal in Animal.objects.all():
+            if animal.lieu.id_equip == self.id_equip:
+                occupants.append(animal)
+        return occupants
+
 
 class Animal(models.Model):
     id_animal = models.CharField(max_length=100, primary_key=True)
