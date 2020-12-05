@@ -41,10 +41,15 @@
                     <div class="col-md-6">
                         <div class="card">
                             <h2 class="card-header lightcoral">
-                                <a class="text-white" href="{% url 'animal_detail' id_animal=animal.id_animal %}">{{ animal.id_animal }}</a>
+                                <a class="text-white" href="{% url 'animal_detail' id_animal=animal.id_animal %}">
+                                    {{ animal.id_animal }}
+                                </a>
                             </h2>
+
                             <div class="card-body">
-                                <img src="{{ animal.photo }}" alt="" width="100%"/>
+                                <a class="text-white" href="{% url 'animal_detail' id_animal=animal.id_animal %}">
+                                    <img src="{{ animal.photo }}" alt="" width="100%"/>
+                                </a>
                                 <p class="card-text center">Etat : {{ animal.etat }}</p>
                             </div>
                         </div>
@@ -60,10 +65,14 @@
                     <div class="col-md-6">
                         <div class="card">
                             <h2 class="card-header cadetblue">
-                                <a class="text-white" href="{% url 'equipement_detail' id_equip=equipement.id_equip %}">{{ equipement.id_equip | capfirst }}</a>
+                                <a class="text-white" href="{% url 'equipement_detail' id_equip=equipement.id_equip %}">
+                                    {{ equipement.id_equip | capfirst }}
+                                </a>
                             </h2>
                             <div class="card-body">
-                                <img src="{{ equipement.photo }}" alt="" width="100%"/>
+                                <a class="text-white" href="{% url 'equipement_detail' id_equip=equipement.id_equip %}">
+                                    <img src="{{ equipement.photo }}" alt="" width="100%"/>
+                                </a>
                                 <p class="card-text center">Disponibilité : {{ equipement.disponibilite }}</p>
                             </div>
                         </div>
