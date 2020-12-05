@@ -5,10 +5,26 @@ from .models import Animal, Equipement
 def animalerie(request):
     animaux = Animal.objects.all()
     equipements = Equipement.objects.all()
+    message_type, message = "", ""
+
+    if request.method == "GET":
+        if 'animal' and 'equipement' in request.GET:
+            id_equip = request.GET['equipement']
+            animal = Animal.objects.get(id_animal=request.GET['animal'])
+            if id_equip == "litière":
+                message_type, message = animal.reveiller()
+            elif id_equip == "mangeoire":
+                message_type, message = animal.nourrir()
+            elif id_equip == "roue":
+                message_type, message = animal.divertir()
+            elif id_equip == "nid":
+                message_type, message = animal.coucher()
 
     return render(request, 'animalerie/animalerie.html', {
         'animaux': animaux,
         'equipements': equipements,
+        'type': message_type,
+        'message': message
     })
 
 

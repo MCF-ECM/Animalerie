@@ -43,6 +43,10 @@ a:hover{
     text-decoration: none;
 }
 
+.align-right {
+    float: right;
+}
+
 .content {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -56,6 +60,11 @@ a:hover{
 .card-header {
     padding: 20px;
     margin-bottom: 20px;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .center {

@@ -1,6 +1,38 @@
 {% extends 'animalerie/base.html' %}
 
 {% block content %}
+    <div class="card">
+        <h2 class="card-header darkseagreen text-white">Déplacement</h2>
+        <form method="GET">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="animal">Animal :</label>
+                        <select id="animal" name="animal" class="form-control" required>
+                                <option></option>
+                            {% for animal in animaux  %}
+                                <option value="{{ animal }}">{{ animal }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label for="equipement">Equipement :</label>
+                        <select id="equipement" name="equipement" class="form-control" required>
+                                <option></option>
+                            {% for equipement in equipements  %}
+                                <option value="{{ equipement }}">{{ equipement | capfirst }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="card-footer footer-right">
+                    <button type="submit" class="btn darkseagreen text-white">Déplacer</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
     <div class="row">
         <div class="col-md-6">
             <h1 class="text-lightcoral">Animaux</h1>

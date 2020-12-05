@@ -13,6 +13,14 @@
     <body>
         <div class="header darkgrey">
             <span class="h1"><a class="text-white" href="{% url 'animalerie' %}">Animalerie</a></span>
+            {% if message %}
+                <div class="alert alert-{{ type }} alert-dismissible fade show align-right" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endif %}
         </div>
 
         <div class="content container">
