@@ -30,7 +30,25 @@ def animalerie(request):
 
 def animal_detail(request, id_animal):
     animal = get_object_or_404(Animal, id_animal=id_animal)
-    return render(request, 'animalerie/animal_detail.html', {'animal': animal})
+    message_type, message = "", ""
+
+    if request.method == "GET":
+        if 'action' in request.GET:
+            action = request.GET["action"]
+            if action == "reveiller":
+                message_type, message = animal.reveiller()
+            elif action == "nourrir":
+                message_type, message = animal.nourrir()
+            elif action == "divertir":
+                message_type, message = animal.divertir()
+            elif action == "coucher":
+                message_type, message = animal.coucher()
+
+    return render(request, 'animalerie/animal_detail.html', {
+        'animal': animal,
+        'type': message_type,
+        'message': message
+    })
 
 def equipement_detail(request, id_equip):
     equipement = get_object_or_404(Equipement, id_equip=id_equip)

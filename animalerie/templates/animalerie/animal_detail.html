@@ -23,6 +23,15 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-lg-3 center"><a class="btn lightcoral text-white" href="{% url 'animal_detail' id_animal=animal.id_animal %}?action=reveiller">Réveiller</a></div>
+                        <div class="col-lg-3 center"><a class="btn lightcoral text-white" href="{% url 'animal_detail' id_animal=animal.id_animal %}?action=nourrir">Nourrir</a></div>
+                        <div class="col-lg-3 center"><a class="btn lightcoral text-white" href="{% url 'animal_detail' id_animal=animal.id_animal %}?action=divertir">Divertir</a></div>
+                        <div class="col-lg-3 center"><a class="btn lightcoral text-white" href="{% url 'animal_detail' id_animal=animal.id_animal %}?action=coucher">Coucher</a></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
